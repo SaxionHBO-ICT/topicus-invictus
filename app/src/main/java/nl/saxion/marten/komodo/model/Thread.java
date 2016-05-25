@@ -19,7 +19,7 @@ public class Thread {
     //private Comment lastComment;
     private int totalKudos;
     //private int totalComments;
-    private int totalViews;
+    //private int totalViews;
     private int totalSubscribed;
 
     private List<Comment> comments;
