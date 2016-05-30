@@ -20,8 +20,8 @@ public class LoginActivity extends AppCompatActivity {
 
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final CheckBox cbRemember = (CheckBox) findViewById(R.id.cbRemember);
-        Button btnLogin = (Button) findViewById(R.id.btnLogin);
+        final CheckBox cbRemember = (CheckBox) findViewById(R.id.checkBox);
+        Button btnLogin = (Button) findViewById(R.id.button);
 
         if(getPreferences(MODE_PRIVATE).contains("username")) {
             cbRemember.setChecked(true);
@@ -37,13 +37,13 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(Login.login(username, password)){
                     if(cbRemember.isChecked()) {
-                        getPreferences(MODE_PRIVATE).edit().putString("username", username);
-                        getPreferences(MODE_PRIVATE).edit().putString("password", password);
+                        getPreferences(MODE_PRIVATE).edit().putString("username", username).apply();
+                        getPreferences(MODE_PRIVATE).edit().putString("password", password).apply();
                     } else {
-                        getPreferences(MODE_PRIVATE).edit().remove("username");
-                        getPreferences(MODE_PRIVATE).edit().remove("password");
+                        getPreferences(MODE_PRIVATE).edit().remove("username").apply();
+                        getPreferences(MODE_PRIVATE).edit().remove("password").apply();
                     }
-                    Intent intent = new Intent(getApplicationContext(), MainMenuActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), ThreadListActivity.class);
                     startActivity(intent);
                     finish();
                 }
