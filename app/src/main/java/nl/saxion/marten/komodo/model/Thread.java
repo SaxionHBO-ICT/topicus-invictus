@@ -4,13 +4,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
  * Created by fatahfattah on 18-05-16. 
  */
 
-public class Thread {
+public class Thread implements Comparable<Thread>{
     private int thread_id;
 
     private String title;
@@ -37,17 +38,62 @@ public class Thread {
         this.totalViews = threadobject.getInt("total_views");
         this.totalSubscribed = threadobject.getInt("total_subscribed");
 
-        JSONArray threadarray = threadobject.getJSONArray("comments");
-        for (int i = 0; i < threadarray.length() ; i++) {
-            comments.add(new Comment(threadarray.getJSONObject(i)));
-        }
     }
 
-    public Comment getLastComment() { //waarom wil je dit?
-        return comments.get(comments.size() - 1);
+    public void giveKudos() {
+        totalKudos += 1;
+    }
+
+    @Override
+    public int compareTo(Thread another) {
+        if (this.getTotalKudos() > another.getTotalKudos()) {
+            return -1;
+        }
+        else if (this.getTotalKudos() < another.getTotalKudos()){
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
 
     public int getTotalComments() {
         return comments.size();
     }
-} 
+
+    public int getThread_id() {
+        return thread_id;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public int getTotalKudos() {
+        return totalKudos;
+    }
+
+    public int getTotalViews() {
+        return totalViews;
+    }
+
+    public int getTotalSubscribed() {
+        return totalSubscribed;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
