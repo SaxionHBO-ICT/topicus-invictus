@@ -15,6 +15,17 @@ public class ThreadData {
         return threads;
     }
 
+    public static ArrayList<Thread> getThreadsCreatedByUserID(int User_id) {
+        ArrayList<Thread> createdThreads = new ArrayList<>();
+
+        for (Thread thread : threads) {
+            if (thread.getUser_id() == User_id) {
+                createdThreads.add(thread);
+            }
+        }
+        return createdThreads;
+    }
+
     public static ArrayList<Thread> getPopularThreads() {
         ArrayList<Thread> sortedThreads = new ArrayList<>(threads);
         Collections.sort(sortedThreads);
@@ -26,5 +37,4 @@ public class ThreadData {
             return new ArrayList<>(sortedThreads.subList(0, sortedThreads.size()));
         }
     }
-
 }

@@ -27,7 +27,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0: AllThreadFragment allThreadFragment = new AllThreadFragment(); return allThreadFragment;
             case 1: PopularThreadFragment popularThreadFragment = new PopularThreadFragment(); return popularThreadFragment;
-            case 2: MineThreadFragment mineThreadFragment = new MineThreadFragment();mineThreadFragment.setArguments(fragmentBundle); return mineThreadFragment;
+            case 2: MineThreadFragment mineThreadFragment = new MineThreadFragment(); mineThreadFragment.setArguments(fragmentBundle); return mineThreadFragment;
             default: return null;
         }
     }

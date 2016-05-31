@@ -18,7 +18,7 @@ public class ThreadListActivity extends AppCompatActivity {
 
     private User user;
 
-    public static final String BUNDLE_USERNAME = "BUNDLE_USERNAME";
+    public static final String BUNDLE_USER_ID = "BUNDLE_USER_ID";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class ThreadListActivity extends AppCompatActivity {
         tablayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         Bundle bundle = new Bundle();
-        bundle.putString(BUNDLE_USERNAME, user.getDisplay_name());
+        bundle.putInt(BUNDLE_USER_ID, user.getUser_id());
 
         adapter = new ViewPagerAdapter(getSupportFragmentManager(), tablayout.getTabCount(), bundle);
         viewPager.setAdapter(adapter);

@@ -23,7 +23,7 @@
           "comment_id": 2,
           "text": "Fusce consequat. Nulla nisl. Nunc nisl.",
           "created_at": "03/01/2016",
-          "user_id": 1,
+          "user_id": 2,
           "thread_id": 1,
           "total_kudos": 9
         },
@@ -31,7 +31,7 @@
           "comment_id": 3,
           "text": "Fusce consequat. Nulla nisl. Nunc nisl.",
           "created_at": "10/05/2016",
-          "user_id": 1,
+          "user_id": 3,
           "thread_id": 1,
           "total_kudos": 6
         }
@@ -52,7 +52,7 @@
           "comment_id": 1,
           "text": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
           "created_at": "03/10/2015",
-          "user_id": 2,
+          "user_id": 5,
           "thread_id": 2,
           "total_kudos": 3
         },
@@ -60,7 +60,7 @@
           "comment_id": 2,
           "text": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
           "created_at": "12/05/2016",
-          "user_id": 2,
+          "user_id": 7,
           "thread_id": 2,
           "total_kudos": 3
         },
@@ -68,7 +68,7 @@
           "comment_id": 3,
           "text": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
           "created_at": "15/06/2015",
-          "user_id": 2,
+          "user_id": 1,
           "thread_id": 2,
           "total_kudos": 10
         },
@@ -764,7 +764,7 @@
       "firstname": "Walter",
       "lastname": "Parker",
       "email": "wparker0@a8.net",
-      "password": "mnpIpFO7iI"
+      "password": "12345"
     },
     {
       "user_id": 2,

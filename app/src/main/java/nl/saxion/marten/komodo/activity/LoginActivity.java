@@ -21,6 +21,7 @@ import java.io.InputStreamReader;
 import nl.saxion.marten.komodo.Data.ThreadData;
 import nl.saxion.marten.komodo.Data.UserData;
 import nl.saxion.marten.komodo.R;
+import nl.saxion.marten.komodo.model.Comment;
 import nl.saxion.marten.komodo.model.Thread;
 import nl.saxion.marten.komodo.model.User;
 
@@ -63,9 +64,9 @@ public class LoginActivity extends AppCompatActivity {
 
     private void fetchData() {
         JSONObject jsonObject;
-        JSONArray threads ;
-        JSONArray users ;
-
+        JSONArray threads;
+        JSONArray users;
+        JSONArray comments;
         try {
             String assets = readAssetIntoString("data.json");
             try {
@@ -76,13 +77,22 @@ public class LoginActivity extends AppCompatActivity {
                 for (int i = 0; i < users.length(); i++) {
                     User user = new User(users.getJSONObject(i));
                     UserData.getUsers().add(user);
-                    System.out.println("Number of users created: " + UserData.getUsers().size());
+
+                    //System.out.println("Number of users created: " + UserData.getUsers().size());
                 }
 
                 for (int i = 0; i < threads.length(); i++) {
                     Thread thread = new Thread(threads.getJSONObject(i));
                     ThreadData.getThreads().add(thread);
-                    //System.out.println("Number of threads created: " + ThreadData.getThreads().size());
+
+                    comments = threads.getJSONObject(i).getJSONArray("comments");
+
+                    for (int j = 0; j < comments.length(); j++) {
+                        Comment comment = new Comment(comments.getJSONObject(j));
+
+                        thread.addCommentToThread(comment);
+                    }
+                    System.out.println("Number of threads created: " + ThreadData.getThreads().size());
                 }
             }
             catch (JSONException exception) {

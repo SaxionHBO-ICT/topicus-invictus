@@ -3,6 +3,7 @@ package nl.saxion.marten.komodo.model;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import nl.saxion.marten.komodo.Data.UserData;
@@ -24,7 +25,7 @@ public class Thread implements Comparable<Thread>{
     private int totalViews;
     private int totalSubscribed;
 
-    private List<Comment> comments;
+    private List<Comment> comments = new ArrayList<>();
 
     public Thread(JSONObject threadobject) throws JSONException {
         this.thread_id = threadobject.getInt("thread_id");
@@ -58,12 +59,8 @@ public class Thread implements Comparable<Thread>{
         }
     }
 
-    public int getTotalComments() {
-        return comments.size();
-    }
-
-    public int getThread_id() {
-        return thread_id;
+    public void addCommentToThread(Comment comment) {
+        comments.add(comment);
     }
 
     public String getCreated_at() {
@@ -80,14 +77,6 @@ public class Thread implements Comparable<Thread>{
 
     public int getTotalKudos() {
         return totalKudos;
-    }
-
-    public int getTotalViews() {
-        return totalViews;
-    }
-
-    public int getTotalSubscribed() {
-        return totalSubscribed;
     }
 
     public List<Comment> getComments() {
