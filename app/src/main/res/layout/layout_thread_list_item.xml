@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/fontColor">
+    android:background="@color/whiteColor"
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:padding="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -27,6 +28,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Placeholder for thread date"
                 android:id="@+id/tvThreadDate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Placeholder for User displayname"
+                android:id="@+id/tvThreadDisplayname" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -34,11 +43,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Space
+                android:layout_width="20px"
+                android:layout_height="match_parent" />
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/ivKudos"
-                android:src="@drawable/arrow_green"
+                android:src="@drawable/arrow"
                 android:layout_weight="1" />
 
             <TextView
@@ -46,6 +59,7 @@
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="#"
+                android:textColor="@color/greenFont"
                 android:id="@+id/tvThreadKudos"
                 android:layout_weight="1"
                 android:gravity="center" />

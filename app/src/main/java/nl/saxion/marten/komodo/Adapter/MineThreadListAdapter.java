@@ -15,11 +15,11 @@ import nl.saxion.marten.komodo.R;
 import nl.saxion.marten.komodo.model.Thread;
 
 /**
- * Created by fatahfattah on 30-05-16.
+ * Created by fatahfattah on 31-05-16.
  */
-public class PopularThreadListAdapter extends ArrayAdapter<Thread> {
+public class MineThreadListAdapter extends ArrayAdapter<Thread> {
 
-    public PopularThreadListAdapter(Context context, int resource, List<Thread> objects) {
+    public MineThreadListAdapter(Context context, int resource, List<Thread> objects) {
         super(context, resource, objects);
     }
 
@@ -29,7 +29,7 @@ public class PopularThreadListAdapter extends ArrayAdapter<Thread> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.layout_thread_list_item, parent, false);
         }
 
-        final Thread thread = ThreadData.getPopularThreads().get(position);
+        final Thread thread = ThreadData.getThreads().get(position);
 
         TextView tvThreadTitle = (TextView)convertView.findViewById(R.id.tvThreadTitle);
         tvThreadTitle.setText(thread.getTitle());
