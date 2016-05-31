@@ -1,11 +1,11 @@
 package nl.saxion.marten.komodo.model;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Comparator;
 import java.util.List;
+
+import nl.saxion.marten.komodo.Data.UserData;
 
 /**
  * Created by fatahfattah on 18-05-16. 
@@ -38,6 +38,7 @@ public class Thread implements Comparable<Thread>{
         this.totalViews = threadobject.getInt("total_views");
         this.totalSubscribed = threadobject.getInt("total_subscribed");
 
+        UserData.addThreadToUsers(this);
     }
 
     public void giveKudos() {

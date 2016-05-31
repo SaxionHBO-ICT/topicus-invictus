@@ -755,80 +755,149 @@
           "total_kudos": 3
         }
       ]
+    }
+  ],
+
+  "user": [
+    {
+      "user_id": 1,
+      "firstname": "Walter",
+      "lastname": "Parker",
+      "email": "wparker0@a8.net",
+      "password": "mnpIpFO7iI"
     },
     {
-      "thread_id": 21,
-      "title": "This is dummy thread21",
-      "text": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-      "created_at": "11/05/2015",
-      "user_id": 21,
-      "total_kudos": 59,
-      "total_comments": 5,
-      "total_views": 5,
-      "total_subscribed": 6,
-      "comments": [
-        {
-          "comment_id": 1,
-          "text": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-          "created_at": "10/10/2015",
-          "user_id": 21,
-          "thread_id": 21,
-          "total_kudos": 8
-        },
-        {
-          "comment_id": 2,
-          "text": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-          "created_at": "12/06/2015",
-          "user_id": 21,
-          "thread_id": 21,
-          "total_kudos": 5
-        },
-        {
-          "comment_id": 3,
-          "text": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-          "created_at": "25/07/2015",
-          "user_id": 21,
-          "thread_id": 21,
-          "total_kudos": 7
-        },
-        {
-          "comment_id": 4,
-          "text": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-          "created_at": "20/11/2015",
-          "user_id": 21,
-          "thread_id": 21,
-          "total_kudos": 7
-        }
-      ]
+      "user_id": 2,
+      "firstname": "Michelle",
+      "lastname": "Ryan",
+      "email": "mryan1@taobao.com",
+      "password": "ChhhRwBm"
     },
     {
-      "thread_id": 22,
-      "title": "This is dummy thread22",
-      "text": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-      "created_at": "16/11/2015",
-      "user_id": 22,
-      "total_kudos": 63,
-      "total_comments": 5,
-      "total_views": 85,
-      "total_subscribed": 10,
-      "comments": [
-        {
-          "comment_id": 1,
-          "text": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-          "created_at": "17/03/2016",
-          "user_id": 22,
-          "thread_id": 22,
-          "total_kudos": 8
-        },
-        {
-          "comment_id": 2,
-          "text": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-          "created_at": "01/11/2015",
-          "user_id": 22,
-          "thread_id": 22,
-          "total_kudos": 8
-        }
-      ]
+      "user_id": 3,
+      "firstname": "Terry",
+      "lastname": "Parker",
+      "email": "tparker2@1und1.de",
+      "password": "6JlkTNBwkEj"
+    },
+    {
+      "user_id": 4,
+      "firstname": "Norma",
+      "lastname": "Larson",
+      "email": "nlarson3@newyorker.com",
+      "password": "4ZZFbbod78"
+    },
+    {
+      "user_id": 5,
+      "firstname": "Todd",
+      "lastname": "Mills",
+      "email": "tmills4@usgs.gov",
+      "password": "8A9sQDQAaVQa"
+    },
+    {
+      "user_id": 6,
+      "firstname": "Jesse",
+      "lastname": "West",
+      "email": "jwest5@bandcamp.com",
+      "password": "VAoBfi7uOWG"
+    },
+    {
+      "user_id": 7,
+      "firstname": "Sharon",
+      "lastname": "Sanchez",
+      "email": "ssanchez6@blinklist.com",
+      "password": "Npn7C4Kb5UK"
+    },
+    {
+      "user_id": 8,
+      "firstname": "Helen",
+      "lastname": "Hunter",
+      "email": "hhunter7@aboutads.info",
+      "password": "0NLpe4g80"
+    },
+    {
+      "user_id": 9,
+      "firstname": "Samuel",
+      "lastname": "Bradley",
+      "email": "sbradley8@hubpages.com",
+      "password": "wVYEILo"
+    },
+    {
+      "user_id": 10,
+      "firstname": "Robert",
+      "lastname": "Stevens",
+      "email": "rstevens9@weebly.com",
+      "password": "K2uVxl"
+    },
+    {
+      "user_id": 11,
+      "firstname": "Scott",
+      "lastname": "Wagner",
+      "email": "swagnera@google.es",
+      "password": "u2jUs2AX"
+    },
+    {
+      "user_id": 12,
+      "firstname": "Doris",
+      "lastname": "Roberts",
+      "email": "drobertsb@goodreads.com",
+      "password": "hiqk5lcQM4G"
+    },
+    {
+      "user_id": 13,
+      "firstname": "Ann",
+      "lastname": "Henry",
+      "email": "ahenryc@stumbleupon.com",
+      "password": "Km7ClOdpQ"
+    },
+    {
+      "user_id": 14,
+      "firstname": "Carlos",
+      "lastname": "Rogers",
+      "email": "crogersd@cnn.com",
+      "password": "MDuglo3KZ"
+    },
+    {
+      "user_id": 15,
+      "firstname": "Craig",
+      "lastname": "Romero",
+      "email": "cromeroe@usnews.com",
+      "password": "4LjK7EuB"
+    },
+    {
+      "user_id": 16,
+      "firstname": "Donna",
+      "lastname": "Garza",
+      "email": "dgarzaf@ihg.com",
+      "password": "EK8hfSaxl"
+    },
+    {
+      "user_id": 17,
+      "firstname": "Jane",
+      "lastname": "Wells",
+      "email": "jwellsg@newyorker.com",
+      "password": "6TsR8i8"
+    },
+    {
+      "user_id": 18,
+      "firstname": "Arthur",
+      "lastname": "Gibson",
+      "email": "agibsonh@ibm.com",
+      "password": "QZ0hGciu5O"
+    },
+    {
+      "user_id": 19,
+      "firstname": "Deborah",
+      "lastname": "Mason",
+      "email": "dmasoni@wix.com",
+      "password": "Yy9jU346NY"
+    },
+    {
+      "user_id": 20,
+      "firstname": "test",
+      "lastname": "1",
+      "email": "test@test.com",
+      "password": "12345"
     }
   ]
 }

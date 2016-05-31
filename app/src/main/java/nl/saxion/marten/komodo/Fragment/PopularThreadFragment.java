@@ -1,6 +1,7 @@
 package nl.saxion.marten.komodo.Fragment;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,7 @@ import nl.saxion.marten.komodo.R;
 /**
  * Created by fatahfattah on 29-05-16.
  */
-public class PopularThreadFragment extends android.support.v4.app.Fragment {
+public class PopularThreadFragment extends Fragment {
 
     @Nullable
     @Override

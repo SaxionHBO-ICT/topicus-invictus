@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import nl.saxion.marten.komodo.Data.UserData;
 import nl.saxion.marten.komodo.R;
 import nl.saxion.marten.komodo.model.Thread;
 import nl.saxion.marten.komodo.Data.ThreadData;
@@ -38,6 +39,9 @@ public class AllThreadListAdapter extends ArrayAdapter<Thread> {
 
         TextView tvThreadKudos = (TextView)convertView.findViewById(R.id.tvThreadKudos);
         tvThreadKudos.setText(Integer.toString(thread.getTotalKudos()));
+
+        TextView tvThreadDisplayname = (TextView)convertView.findViewById(R.id.tvThreadDisplayname);
+        tvThreadDisplayname.setText("Created by: " + UserData.getUserFromID(thread.getUser_id()).getDisplay_name());
 
         convertView.findViewById(R.id.ivKudos).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,9 @@
 package nl.saxion.marten.komodo.model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -7,12 +11,11 @@ import java.util.Date;
  */
 
 public class User {
-    private static int user_id;
-    private String username;
+    private int user_id;
+    private String display_name;
     private String password;
     private String firstname;
     private String lastname;
-    private int profilePicture; // profielfoto in integer zodat alleen de resource id wordt opgeslagen in het object 
     private String email;
 
     private String createdOn;
@@ -20,11 +23,57 @@ public class User {
 
     private int totalKudos;
     private int totalComments;
-    private int totalSubscriptions; // aantal threads die deze user volgt 
-    private int createdThreads;
+    private int totalSubscriptions; // aantal threads die deze user volgt
 
-    public User() {
-        user_id = user_id + 1; // user id verhoogt met 1 iedere keer dat een user object aangemaakt wordt 
-        createdOn = new Date().toString();
+    //Lijst van threads aangemaakt door deze user
+    private ArrayList<Thread> createdThreads = new ArrayList<>();
+
+    public User(JSONObject userObject) throws JSONException {
+        this.user_id = userObject.getInt("user_id");
+        this.password = userObject.getString("password");
+        this.firstname = userObject.getString("firstname");
+        this.lastname = userObject.getString("lastname");
+        this.email = userObject.getString("email");
+
+        this.createdOn = new Date().toString();
+
+        this.display_name = firstname + "" + lastname;
     }
-} 
+
+    public void putNewCreatedThread(Thread thread) {
+        createdThreads.add(thread);
+    }
+
+    public ArrayList<Thread> getCreatedThreads() {
+        return new ArrayList<>(createdThreads);
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public String getDisplay_name() {
+        return display_name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCreatedOn() {
+        return createdOn;
+    }
+
+}
