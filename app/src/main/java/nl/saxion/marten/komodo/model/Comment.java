@@ -24,4 +24,28 @@ public class Comment {
         this.thread_id = commentObject.getInt("thread_id");
         this.total_kudos = commentObject.getInt("total_kudos");
     }
-} 
+
+    public int getComment_id() {
+        return comment_id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public int getThread_id() {
+        return thread_id;
+    }
+
+    public int getTotal_kudos() {
+        return total_kudos;
+    }
+}

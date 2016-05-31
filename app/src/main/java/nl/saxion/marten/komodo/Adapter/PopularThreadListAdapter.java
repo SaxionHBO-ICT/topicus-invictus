@@ -53,4 +53,6 @@ public class PopularThreadListAdapter extends ArrayAdapter<Thread> {
 
         return convertView;
     }
+
+
 }

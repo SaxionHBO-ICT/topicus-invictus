@@ -59,21 +59,4 @@ public class User {
     public String getPassword() {
         return password;
     }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getCreatedOn() {
-        return createdOn;
-    }
-
 }
