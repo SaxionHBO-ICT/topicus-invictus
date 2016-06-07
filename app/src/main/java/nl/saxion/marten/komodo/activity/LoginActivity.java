@@ -43,7 +43,9 @@ public class LoginActivity extends AppCompatActivity {
         cbRemember = (CheckBox) findViewById(R.id.checkBox);
         btnLogin = (Button) findViewById(R.id.button);
 
-        fetchData();
+        if (ThreadData.getThreads().size() == 0) {
+            fetchData();
+        }
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
