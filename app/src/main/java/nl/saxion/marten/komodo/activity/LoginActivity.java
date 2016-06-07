@@ -78,14 +78,14 @@ public class LoginActivity extends AppCompatActivity {
 
                 for (int i = 0; i < users.length(); i++) {
                     User user = new User(users.getJSONObject(i));
-                    UserData.getUsers().add(user);
+                    UserData.getUsers().add(0, user);
 
                     //System.out.println("Number of users created: " + UserData.getUsers().size());
                 }
 
                 for (int i = 0; i < threads.length(); i++) {
                     Thread thread = new Thread(threads.getJSONObject(i));
-                    ThreadData.getThreads().add(thread);
+                    ThreadData.getThreads().add(0, thread);
 
                     comments = threads.getJSONObject(i).getJSONArray("comments");
 

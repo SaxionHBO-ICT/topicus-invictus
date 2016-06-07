@@ -18,7 +18,11 @@
         <activity android:name=".activity.ThreadListActivity">
 
         </activity>
+
         <activity android:name=".activity.ThreadDetailActivity">
+        </activity>
+        
+        <activity android:name=".activity.ThreadCreationActivity">
 
         </activity>
     </application>

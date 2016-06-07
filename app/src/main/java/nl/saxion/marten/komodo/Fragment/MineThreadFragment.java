@@ -27,7 +27,7 @@ public class MineThreadFragment extends Fragment {
         View rootview = inflater.inflate(R.layout.fragment_thread_list, container, false);
 
         Bundle bundle = getArguments();
-        int user_id = bundle.getInt(ThreadListActivity.BUNDLE_USER_ID);
+        final int user_id = bundle.getInt(ThreadListActivity.BUNDLE_USER_ID);
 
         final ListView listView = (ListView) rootview.findViewById(R.id.thread_list_container);
         final MineThreadListAdapter adapter = new MineThreadListAdapter(getContext(), R.layout.layout_thread_list_item, ThreadData.getThreadsCreatedByUserID(user_id));
@@ -37,7 +37,8 @@ public class MineThreadFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), ThreadDetailActivity.class);
-                intent.putExtra("EXTRA_INT", position);
+                int thread_id = ThreadData.getThreadsCreatedByUserID(user_id).get(position).getThread_id();
+                intent.putExtra("EXTRA_INT", thread_id);
                 startActivity(intent);
             }
         });

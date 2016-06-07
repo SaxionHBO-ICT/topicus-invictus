@@ -34,7 +34,8 @@ public class AllThreadFragment extends Fragment{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), ThreadDetailActivity.class);
-                intent.putExtra("EXTRA_INT", position);
+                int thread_id = ThreadData.getThreads().get(position).getThread_id();
+                intent.putExtra("EXTRA_INT", thread_id);
                 startActivity(intent);
             }
         });
