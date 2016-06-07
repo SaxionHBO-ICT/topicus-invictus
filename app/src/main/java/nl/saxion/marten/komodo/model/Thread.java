@@ -27,6 +27,14 @@ public class Thread implements Comparable<Thread>{
 
     private List<Comment> comments = new ArrayList<>();
 
+    public Thread(String title, String text, int user_id, String created_at) {
+        this.title = title;
+        this.text = text;
+        this.user_id = user_id;
+        this.created_at = created_at;
+
+    }
+
     public Thread(JSONObject threadobject) throws JSONException {
         this.thread_id = threadobject.getInt("thread_id");
 
@@ -85,5 +93,9 @@ public class Thread implements Comparable<Thread>{
 
     public String getTitle() {
         return title;
+    }
+
+    public int getThread_id() {
+        return thread_id;
     }
 }

@@ -9,24 +9,25 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Placeholder for thread title"
-            android:id="@+id/tvDetailThreadTitle"
-            android:layout_gravity="center_horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="5dp" />
-
-            <LinearLayout
+        <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="4">
 
-                <TextView
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Placeholder for thread title"
+                android:id="@+id/tvDetailThreadTitle"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp" />
+
+            <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
@@ -48,5 +49,27 @@
                     android:id="@+id/lvDetailThread"
                     android:scrollIndicators="none" />
             </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/etDetailComment"
+                android:layout_weight="4"
+                android:layout_gravity="bottom|center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/send"
+                android:id="@+id/btnDetailSend"
+                android:layout_weight="1" />
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

@@ -26,6 +26,15 @@ public class ThreadData {
         return createdThreads;
     }
 
+    public static Thread findThreadById(int id) {
+        for (Thread thread : threads) {
+            if (thread.getThread_id() == id) {
+                return thread;
+            }
+        }
+        return null;
+    }
+
     public static ArrayList<Thread> getPopularThreads() {
         ArrayList<Thread> sortedThreads = new ArrayList<>(threads);
         Collections.sort(sortedThreads);

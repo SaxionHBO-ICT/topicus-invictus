@@ -15,6 +15,14 @@ public class Comment {
     private int thread_id; // In welke thread
     private int total_kudos;
 
+    public Comment(int comment_id, String text, String created_at, int user_id, int thread_id) {
+        this.comment_id = comment_id;
+        this.text = text;
+        this.created_at = created_at;
+        this.user_id = user_id;
+        this.thread_id = thread_id;
+    }
+
     public Comment(JSONObject commentObject) throws JSONException{
         this.comment_id = commentObject.getInt("comment_id");
 

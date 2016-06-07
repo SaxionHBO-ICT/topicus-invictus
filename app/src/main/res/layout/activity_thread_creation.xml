@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="@string/thread_title"
+            android:background="@color/topicusBlauw"
+            android:textColor="@color/whiteColor"
+            android:id="@+id/etThreadCreationTitle"
+            android:padding="10dp"
+            android:layout_weight="0.1" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView2"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/etThreadCreationText"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp" />
+        </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:id="@+id/btnThreadCreationbtn"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.005"
+            android:background="@color/topicusBlauw"
+            android:textColor="@color/whiteColor"/>
+    </LinearLayout>
+
+</LinearLayout>
