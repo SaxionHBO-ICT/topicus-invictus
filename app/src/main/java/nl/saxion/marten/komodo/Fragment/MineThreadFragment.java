@@ -19,6 +19,10 @@ import nl.saxion.marten.komodo.activity.ThreadListActivity;
 /**
  * Created by fatahfattah on 31-05-16.
  */
+
+/**
+ * Fragment that holds a list of all threads created by a given user
+ */
 public class MineThreadFragment extends Fragment {
 
     @Nullable
@@ -33,6 +37,7 @@ public class MineThreadFragment extends Fragment {
         final MineThreadListAdapter adapter = new MineThreadListAdapter(getContext(), R.layout.layout_thread_list_item, ThreadData.getThreadsCreatedByUserID(user_id));
         listView.setAdapter(adapter);
 
+        //Listener to see details of the clicked thread in the list
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

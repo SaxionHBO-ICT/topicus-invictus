@@ -18,6 +18,10 @@ import nl.saxion.marten.komodo.activity.ThreadDetailActivity;
 /**
  * Created by fatahfattah on 29-05-16.
  */
+
+/**
+ * Fragment that holds a list of top 10 popular threads
+ */
 public class PopularThreadFragment extends Fragment {
     @Nullable
     @Override
@@ -28,6 +32,7 @@ public class PopularThreadFragment extends Fragment {
         PopularThreadListAdapter adapter = new PopularThreadListAdapter(getContext(), R.layout.layout_thread_list_item, ThreadData.getPopularThreads());
         listView.setAdapter(adapter);
 
+        //Listener to see details of the clicked thread in the list
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -17,6 +17,11 @@ import nl.saxion.marten.komodo.model.Thread;
 /**
  * Created by fatahfattah on 31-05-16.
  */
+
+/**
+ * Adapter to show a list of all threads created by currently logged in user
+ * Called in the MineThreadFragment
+ */
 public class MineThreadListAdapter extends ArrayAdapter<Thread> {
     List<Thread> threads = new ArrayList<>();
 

@@ -25,6 +25,10 @@ import nl.saxion.marten.komodo.model.Comment;
 import nl.saxion.marten.komodo.model.Thread;
 import nl.saxion.marten.komodo.model.User;
 
+/**
+ * Activity where user can login
+ * If login is correct the app will go to the ThreadListActivity
+ */
 public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etPassword;
@@ -43,10 +47,17 @@ public class LoginActivity extends AppCompatActivity {
         cbRemember = (CheckBox) findViewById(R.id.checkBox);
         btnLogin = (Button) findViewById(R.id.button);
 
+        /**
+         * Fetches thread data when app starts up
+         */
         if (ThreadData.getThreads().size() == 0) {
             fetchData();
         }
 
+        /**
+         * Listener for login button
+         * Checks if entered username and password matches an user in the database
+         */
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (etUsername.getText() != null && etPassword != null) {
@@ -64,6 +75,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Method to fetch data from a json file
+     * Creates json objects from a the provided assets
+     * Turns the json objects into java objects
+     */
     private void fetchData() {
         JSONObject jsonObject;
         JSONArray threads;
@@ -79,26 +95,20 @@ public class LoginActivity extends AppCompatActivity {
                 for (int i = 0; i < users.length(); i++) {
                     User user = new User(users.getJSONObject(i));
                     UserData.getUsers().add(0, user);
-
-                    //System.out.println("Number of users created: " + UserData.getUsers().size());
                 }
-
                 for (int i = 0; i < threads.length(); i++) {
                     Thread thread = new Thread(threads.getJSONObject(i));
                     ThreadData.getThreads().add(0, thread);
-
                     comments = threads.getJSONObject(i).getJSONArray("comments");
 
                     for (int j = 0; j < comments.length(); j++) {
                         Comment comment = new Comment(comments.getJSONObject(j));
-
                         thread.addCommentToThread(comment);
                     }
-                    System.out.println("Number of threads created: " + ThreadData.getThreads().size());
                 }
             }
             catch (JSONException exception) {
-
+                System.out.println("Invalid JSON object");
             }
         }
         catch (IOException exception) {
@@ -106,6 +116,13 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to read the data from a text file
+     * return a String which will be used to create objects from
+     * @param filename = the json file which holds the data
+     * @return String
+     * @throws IOException
+     */
     private String readAssetIntoString(String filename) throws IOException {
         BufferedReader br = null;
         StringBuilder sb = new StringBuilder();

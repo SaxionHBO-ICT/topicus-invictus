@@ -10,13 +10,17 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.saxion.marten.komodo.Data.ThreadData;
 import nl.saxion.marten.komodo.Data.UserData;
 import nl.saxion.marten.komodo.R;
 import nl.saxion.marten.komodo.model.Thread;
 
 /**
  * Created by fatahfattah on 30-05-16.
+ */
+
+/**
+ * Adapter to show a list of top 10 popular threads
+ * Called in the PopularThreadFragment
  */
 public class PopularThreadListAdapter extends ArrayAdapter<Thread> {
 

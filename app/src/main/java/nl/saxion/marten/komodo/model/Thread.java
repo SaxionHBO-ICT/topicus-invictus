@@ -12,6 +12,9 @@ import nl.saxion.marten.komodo.Data.UserData;
  * Created by fatahfattah on 18-05-16. 
  */
 
+/**
+ * Thread object
+ */
 public class Thread implements Comparable<Thread>{
     private int thread_id;
 
@@ -21,9 +24,6 @@ public class Thread implements Comparable<Thread>{
     private String created_at;
     private int user_id;
     private int totalKudos;
-    private int totalComments;
-    private int totalViews;
-    private int totalSubscribed;
 
     private List<Comment> comments = new ArrayList<>();
 
@@ -43,9 +43,6 @@ public class Thread implements Comparable<Thread>{
         this.created_at = threadobject.getString("created_at");
         this.user_id = threadobject.getInt("user_id");
         this.totalKudos = threadobject.getInt("total_kudos");
-        this.totalComments = threadobject.getInt("total_comments");
-        this.totalViews = threadobject.getInt("total_views");
-        this.totalSubscribed = threadobject.getInt("total_subscribed");
 
         UserData.addThreadToUsers(this);
     }
@@ -54,6 +51,11 @@ public class Thread implements Comparable<Thread>{
         totalKudos += 1;
     }
 
+    /**
+     * Comparator method
+     * @param another thread
+     * @return thread with most kudos
+     */
     @Override
     public int compareTo(Thread another) {
         if (this.getTotalKudos() > another.getTotalKudos()) {
