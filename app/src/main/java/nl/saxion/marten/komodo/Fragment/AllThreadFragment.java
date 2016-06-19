@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +18,10 @@ import nl.saxion.marten.komodo.activity.ThreadDetailActivity;
 /**
  * Created by fatahfattah on 29-05-16.
  */
+
+/**
+ * Fragment that holds a list of all threads
+ */
 public class AllThreadFragment extends Fragment{
 
     @Nullable
@@ -30,6 +33,7 @@ public class AllThreadFragment extends Fragment{
         final AllThreadListAdapter adapter = new AllThreadListAdapter(getContext(), R.layout.layout_thread_list_item, ThreadData.getThreads());
         listView.setAdapter(adapter);
 
+        //Listener to see details of the clicked thread in the list
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

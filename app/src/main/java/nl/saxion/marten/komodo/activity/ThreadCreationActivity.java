@@ -14,6 +14,10 @@ import nl.saxion.marten.komodo.R;
 /**
  * Created by fatahfattah on 07-06-16.
  */
+
+/**
+ * Activity for getting user input and passing this back to previous activity
+ */
 public class ThreadCreationActivity extends AppCompatActivity {
 
     public static final String EXTRA_TITLE = "EXTRA_TITLE";
@@ -26,10 +30,15 @@ public class ThreadCreationActivity extends AppCompatActivity {
 
         final TextView etThreadCreationTitle = (TextView)findViewById(R.id.etThreadCreationTitle);
 
-
         final EditText etThreadCreationText = (EditText)findViewById(R.id.etThreadCreationText);
 
         Button btnThreadCreationbtn = (Button)findViewById(R.id.btnThreadCreationbtn);
+
+        /**
+         * Listener to retrieve input,
+         * Bundle input
+         * Sending bundle back to previous activity
+         */
         btnThreadCreationbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

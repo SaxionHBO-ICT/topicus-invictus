@@ -17,6 +17,12 @@ import nl.saxion.marten.komodo.model.Comment;
 /**
  * Created by fatahfattah on 31-05-16.
  */
+
+/**
+ * Adapter to show a list of all comments for a specific thread
+ * List is shown in the thread detail activity
+ * Called in the ThreadDetailActivity
+ */
 public class ThreadDetailCommentAdapter extends ArrayAdapter<Comment> {
     List<Comment> comments = new ArrayList<>();
 

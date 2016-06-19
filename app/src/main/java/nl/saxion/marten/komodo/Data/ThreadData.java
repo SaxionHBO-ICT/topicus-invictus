@@ -8,6 +8,10 @@ import nl.saxion.marten.komodo.model.Thread;
 /**
  * Created by fatahfattah on 29-05-16.
  */
+
+/**
+ * Singleton Thread data class
+ */
 public class ThreadData {
     public static ArrayList<Thread> threads = new ArrayList<>();
 
@@ -15,6 +19,11 @@ public class ThreadData {
         return threads;
     }
 
+    /**
+     * Method to return a list of thread created by a certain user_id
+     * @param User_id
+     * @return List of threads
+     */
     public static ArrayList<Thread> getThreadsCreatedByUserID(int User_id) {
         ArrayList<Thread> createdThreads = new ArrayList<>();
 
@@ -26,15 +35,26 @@ public class ThreadData {
         return createdThreads;
     }
 
-    public static Thread findThreadById(int id) {
+    /**
+     * Method to find a thread by a thread_id
+     * @param thread_id
+     * @return
+     */
+    public static Thread findThreadById(int thread_id) {
         for (Thread thread : threads) {
-            if (thread.getThread_id() == id) {
+            if (thread.getThread_id() == thread_id) {
                 return thread;
             }
         }
         return null;
     }
 
+    /**
+     * creates a copy of [threads]
+     * sorts the copied arraylist
+     * returns the first 10 objects in this list
+     * @return list of threads
+     */
     public static ArrayList<Thread> getPopularThreads() {
         ArrayList<Thread> sortedThreads = new ArrayList<>(threads);
         Collections.sort(sortedThreads);

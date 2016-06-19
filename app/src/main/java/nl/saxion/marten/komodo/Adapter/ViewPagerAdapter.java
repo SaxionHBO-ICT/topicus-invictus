@@ -12,6 +12,13 @@ import nl.saxion.marten.komodo.Fragment.PopularThreadFragment;
 /**
  * Created by fatahfattah on 29-05-16.
  */
+
+/**
+ * Adapter to manage all fragments
+ * Adapter performs actions when user selects different tab
+ * Upon tab change, this adapter changes content of viewpager to correct fragment
+ * Called in ThreadListActivity
+ */
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     int numberOfTabs;
     Bundle fragmentBundle;

@@ -4,15 +4,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by Gebruiker on 5/18/2016. 
+ * Created by Fatah Fattah on 5/18/2016.
  */
 
+/**
+ * Comment object
+ */
 public class Comment {
     private int comment_id;
     private String text;
     private String created_at;
-    private int user_id; // Door wie
-    private int thread_id; // In welke thread
+    private int user_id;
+    private int thread_id;
     private int total_kudos;
 
     public Comment(int comment_id, String text, String created_at, int user_id, int thread_id) {
@@ -33,9 +36,6 @@ public class Comment {
         this.total_kudos = commentObject.getInt("total_kudos");
     }
 
-    public int getComment_id() {
-        return comment_id;
-    }
 
     public String getText() {
         return text;

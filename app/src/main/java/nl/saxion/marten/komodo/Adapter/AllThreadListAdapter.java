@@ -17,6 +17,11 @@ import nl.saxion.marten.komodo.Data.ThreadData;
 /**
  * Created by fatahfattah on 29-05-16.
  */
+
+/**
+ * Adapter to show a list of all threads, ordered from new to old
+ * Called in the AllThreadFragment
+ */
 public class AllThreadListAdapter extends ArrayAdapter<Thread> {
 
     public AllThreadListAdapter(Context context, int resource, List<Thread> objects) {

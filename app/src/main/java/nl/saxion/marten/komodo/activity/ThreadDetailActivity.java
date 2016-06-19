@@ -2,7 +2,6 @@ package nl.saxion.marten.komodo.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +20,10 @@ import nl.saxion.marten.komodo.model.Thread;
 
 /**
  * Created by fatahfattah on 31-05-16.
+ */
+
+/**
+ * Activity to show all details of a chosen thread
  */
 public class ThreadDetailActivity extends AppCompatActivity {
 

@@ -10,6 +10,9 @@ import java.util.Date;
  * Created by fatahfattah on 18-05-16. 
  */
 
+/**
+ * User object
+ */
 public class User {
     private int user_id;
     private String display_name;
@@ -40,12 +43,12 @@ public class User {
         this.display_name = firstname + "" + lastname;
     }
 
+    /**
+     * Adds a thread to this user object
+     * @param thread
+     */
     public void putNewCreatedThread(Thread thread) {
         createdThreads.add(thread);
-    }
-
-    public ArrayList<Thread> getCreatedThreads() {
-        return new ArrayList<>(createdThreads);
     }
 
     public int getUser_id() {
