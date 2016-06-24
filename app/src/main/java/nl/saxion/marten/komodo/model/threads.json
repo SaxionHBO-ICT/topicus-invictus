@@ -1,0 +1,83 @@
+{
+  "thread": [
+    {
+      "thread_id": 1,
+      "title": "The title for dummy thread 1",
+      "text": "The text for dummy thread 1, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+      "created_at": "01-06-2016",
+      "user_id": 1,
+      "total_kudos": 10,
+      "total_comments": 3,
+      "total_views": 50,
+      "total_subscribed": 2,
+      "comments": [
+        {
+          "comment_id": 1,
+          "text": "The first comment in this thread",
+          "created_at": "02-06-2016",
+          "user_id": 2,
+          "thread_id": 1,
+          "total_kudos": 2,
+        },
+        {
+          "comment_id": 2,
+          "text": "The second comment in this thread",
+          "created_at": "02-06-2016",
+          "user_id": 1,
+          "thread_id": 1,
+          "total_kudos": 0,
+        },
+        {
+          "comment_id": 3,
+          "text": "The third comment in this thread",
+          "created_at": "03-06-2016",
+          "user_id": 2,
+          "thread_id": 1,
+          "total_kudos": 0,
+        }
+      ]
+
+    },
+    {
+      "thread_id": 2,
+      "title": "The title for dummy thread 2",
+      "text": "The text for dummy thread 2, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+      "created_at": "03-06-2016",
+      "user_id": 2,
+      "total_kudos": 7,
+      "total_comments": 1,
+      "total_views": 22,
+      "total_subscribed": 0,
+      "comments": [
+        {
+          "comment_id": 1,
+          "text": "The first comment in this thread",
+          "created_at": "03-06-2016",
+          "user_id": 1,
+          "thread_id": 2,
+          "total_kudos": 2,
+        },
+        {
+          "comment_id": 2,
+          "text": "The second comment in this thread",
+          "created_at": "04-06-2016",
+          "user_id": 2,
+          "thread_id": 2,
+          "total_kudos": 0,
+        }
+      ]
+    },
+    {
+      "thread_id": 3,
+      "title": "The title for dummy thread 3",
+      "text": "The text for dummy thread 3, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+      "created_at": "05-06-2016",
+      "user_id": 3,
+      "total_kudos": 0,
+      "total_comments": 0,
+      "total_views": 6,
+      "total_subscribed": 0,
+      "comments": []
+    }
+  ]
+}
