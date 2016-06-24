@@ -10,59 +10,40 @@
     android:background="@drawable/topicus"
     tools:context=".activity.LoginActivity">
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/username"
-        android:id="@+id/tvUsername"
-        android:textColor="@color/grijs"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:background="@color/topicusBlauw"
+        android:alpha="0.9"
+        android:gravity="center_horizontal">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/etUsername"
-        android:layout_below="@+id/tvUsername"
-        android:textColor="@color/grijs"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/etPassword" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etUsername"
+            android:hint="@string/username"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/password"
-        android:id="@+id/tvPassword"
-        android:textColor="@color/grijs"
-        android:layout_below="@+id/etUsername"
-        android:layout_alignParentStart="true" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/etPassword"
+            android:hint="@string/password"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/etPassword"
-        android:layout_below="@+id/tvPassword"
-        android:textColor="@color/grijs"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:id="@+id/button"
+            android:gravity="center_vertical" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:id="@+id/btnLogin"
-        android:textColor="@color/grijs"
-        android:layout_below="@+id/cbRemember"
-        android:layout_alignParentStart="true" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remember"
+            android:id="@+id/checkBox"/>
+    </LinearLayout>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/remember"
-        android:id="@+id/cbRemember"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentStart="true" />
 </RelativeLayout>

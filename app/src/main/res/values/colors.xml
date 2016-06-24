@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#FDE350</color>
+    <color name="colorPrimaryDark">#FFC6B13B</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="topicusGeel">#FDE350</color>
-    <color name="grijs">#808080</color>
+    <color name="topicusBlauw">#0B93F7</color>
+    <color name="topicusBlauwDonker">#05548e</color>
+    <color name="whiteColor">#f7f6f6</color>
+    <color name="greenFont">#2ea623</color>
+    <color name="selected_fontColor">#FF404040</color>
 </resources>

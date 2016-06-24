@@ -1,41 +1,103 @@
 package nl.saxion.marten.komodo.model;
 
-import java.util.Date;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
+
+import nl.saxion.marten.komodo.Data.UserData;
 
 /**
  * Created by fatahfattah on 18-05-16. 
  */
 
-public class Thread {
+/**
+ * Thread object
+ */
+public class Thread implements Comparable<Thread>{
     private int thread_id;
 
     private String title;
     private String text;
-    private String short_description;
 
-    private String createdOn;
-    private User createdBy;
-    //private Comment lastComment;
+    private String created_at;
+    private int user_id;
     private int totalKudos;
-    //private int totalComments;
-    private int totalViews;
-    private int totalSubscribed;
 
-    private List<Comment> comments;
-    private List<User> usersThatCommented; // lijst van users die een comment geplaats hebben 
+    private List<Comment> comments = new ArrayList<>();
 
-    public Thread() {
-        thread_id = thread_id + 1; // thread id verhoogt met 1 ieder keer dat een nieuwe thread object aangemaakt wordt 
-        createdOn = new Date().toString();
-        //lastComment = comments.get(comments.size() - 1);
+    public Thread(String title, String text, int user_id, String created_at) {
+        this.title = title;
+        this.text = text;
+        this.user_id = user_id;
+        this.created_at = created_at;
+
     }
 
-    public Comment getLastComment() { //waarom wil je dit?
-        return comments.get(comments.size() - 1);
+    public Thread(JSONObject threadobject) throws JSONException {
+        this.thread_id = threadobject.getInt("thread_id");
+
+        this.title = threadobject.getString("title");
+        this.text = threadobject.getString("text");
+        this.created_at = threadobject.getString("created_at");
+        this.user_id = threadobject.getInt("user_id");
+        this.totalKudos = threadobject.getInt("total_kudos");
+
+        UserData.addThreadToUsers(this);
     }
 
-    public int getTotalComments() {
-        return comments.size();
+    public void giveKudos() {
+        totalKudos += 1;
     }
-} 
+
+    /**
+     * Comparator method
+     * @param another thread
+     * @return thread with most kudos
+     */
+    @Override
+    public int compareTo(Thread another) {
+        if (this.getTotalKudos() > another.getTotalKudos()) {
+            return -1;
+        }
+        else if (this.getTotalKudos() < another.getTotalKudos()){
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    public void addCommentToThread(Comment comment) {
+        comments.add(comment);
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public int getTotalKudos() {
+        return totalKudos;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getThread_id() {
+        return thread_id;
+    }
+}
